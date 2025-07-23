@@ -1,20 +1,3 @@
-import { defineStore } from 'pinia'
-
-export const useAuthStore = defineStore('auth', {
-  state: () => ({
-    accessToken: localStorage.getItem('access_token') || null,
-  }),
-  getters: {
-    isLoggedIn: (state) => !!state.accessToken,
-  },
-  actions: {
-    setToken(token) {
-      this.accessToken = token
-      localStorage.setItem('access_token', token)
-    },
-    clearToken() {
-      this.accessToken = null
-      localStorage.removeItem('access_token')
-    }
-  }
-})
+version https://git-lfs.github.com/spec/v1
+oid sha256:9b68ee7ae726f829e2fafc15256405d8ef7a3096d107669c0edf449b6ccf359d
+size 1208
