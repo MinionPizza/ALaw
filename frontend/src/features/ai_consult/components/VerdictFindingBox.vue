@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5bfd8144146ad6d2b20cce103bc2df33e71a842ba2c6fda38cc36916768cd79d
-size 1142
+<template>
+  <div class="verdict-finding-box">
+    <p class="loading-text">AI가 실제 판례를 찾고 있습니다...</p>
+    <div class="typing-indicator">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</template>
+
+<script setup>
+// props나 emits 필요 없음
+</script>
+
+<style scoped>
+
+</style>

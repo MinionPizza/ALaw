@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:234e833306e8f4bb98b09364ca2231f0c38650628f3ee224e72b2d313818f388
-size 1048
+<template>
+  <div class="bottom-action-bar">
+    <button class="action-button left" @click="$emit('predict')">
+      📖 실제 판례 기반 예측하기
+    </button>
+    <button class="action-button right" @click="$emit('quick-consult')">
+      💬 바로 상담하기
+    </button>
+  </div>
+</template>
+
+<script setup>
+defineEmits(['predict', 'quick-consult'])
+</script>
+
+<style scoped>
+
+</style>
