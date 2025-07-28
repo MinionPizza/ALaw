@@ -1,10 +1,3 @@
-from fastapi import FastAPI
-from app.api.routers import analysis
-
-app = FastAPI()
-
-app.include_router(analysis.router, prefix="/api", tags=["analysis"])
-
-@app.get("/")
-def read_root():
-    return {"Hello": "World"}
+version https://git-lfs.github.com/spec/v1
+oid sha256:55ce250405ae14573265a3b280d910a4066d9b40612fb9b10ecc794007a29f1c
+size 814
