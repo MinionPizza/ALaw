@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8ebede0fed91fc29571427cc4a2752bb99ad0427ee5877cf1ed18863ad9b5f17
-size 12531
+name: legal-ai-platform
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  # Install pip packages using:
+  # pip install -r requirements.txt
