@@ -1,12 +1,3 @@
-from fastapi import Depends
-from langchain.llms.base import LLM
-from llm import Gpt4oMini # 실제 LLM 구현체
-from services.case_analysis_service import CaseAnalysisService
-
-def get_llm() -> LLM:
-    """LLM 인스턴스를 반환합니다."""
-    return Gpt4oMini()
-
-def get_case_analysis_service(llm: LLM = Depends(get_llm)) -> CaseAnalysisService:
-    """CaseAnalysisService 인스턴스를 반환합니다."""
-    return CaseAnalysisService(llm)
+version https://git-lfs.github.com/spec/v1
+oid sha256:b6b90f048e45325eddbcfa799001c6e5aeb758b828260a6b24be3d510b559a99
+size 906
