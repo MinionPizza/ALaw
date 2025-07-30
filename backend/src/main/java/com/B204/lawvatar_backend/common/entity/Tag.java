@@ -1,24 +1,3 @@
-package com.B204.lawvatar_backend.common.entity;
-
-import com.B204.lawvatar_backend.user.lawyer.entity.LawyerTag;
-import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
-import java.util.ArrayList;
-import java.util.List;
-
-@Entity
-@Getter
-@NoArgsConstructor
-public class Tag {
-
-    // Field
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "tag_id")
-    private Long Id;
-
-    private String name;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:49643f0b36f9d313cbb064a43f33f83bd5788bb7420d539d9ef1cce1747e7f2b
+size 672
