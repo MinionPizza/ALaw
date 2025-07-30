@@ -1,18 +1,3 @@
-package com.B204.lawvatar_backend.user.lawyer.dto;
-
-import java.util.ArrayList;
-import lombok.Data;
-
-@Data
-public class LawyerSignupDto {
-
-    private String loginEmail;        // 로그인 이메일
-    private String password;     // 비밀번호 (평문 입력, 서버에서 암호화)
-    private String name;         // 변호사 이름
-    private String introduction;
-    private String exam;
-    private String registrationNumber;
-    private String photoBase64;
-
-    private ArrayList<Long> tags;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6141e5d6dd73c1a0cd4f409ad9e6224d59b1bfb7d560e9ebba1aaab7a19e4d7d
+size 763
