@@ -1,18 +1,3 @@
-<template>
-  <div>
-    <button @click="$emit('predict')">
-      📖 실제 판례 기반 예측하기
-    </button>
-    <button @click="$emit('quick-consult')">
-      💬 바로 상담하기
-    </button>
-  </div>
-</template>
-
-<script setup>
-defineEmits(['predict', 'quick-consult'])
-</script>
-
-<style scoped>
-
-</style>
+version https://git-lfs.github.com/spec/v1
+oid sha256:1c30086372d49ba7488c648c1ce5b0a0dff975369481c44ab6432f5743a03a14
+size 1061
