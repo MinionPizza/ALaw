@@ -1,17 +1,3 @@
-import axios from 'axios'
-import { useAuthStore } from '@/stores/auth'
-
-const instance = axios.create({
-  baseURL: 'http://localhost:8080',
-  withCredentials: true      // ← 이걸 켜야 CORS 구문에서 쿠키 허용이 됩니다
-})
-
-instance.interceptors.request.use(config => {
-  const { accessToken } = useAuthStore()
-  if (accessToken) {
-    config.headers.Authorization = `Bearer ${accessToken}`
-  }
-  return config
-})
-
-export default instance
+version https://git-lfs.github.com/spec/v1
+oid sha256:2a9a27234ae07f2e2a7c1efa21cffed02f94d9db24af935f05efcc3c0e6694eb
+size 2427
