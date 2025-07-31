@@ -1,11 +1,3 @@
-import asyncio
-from app.api.schemas.chat import ChatRequest, StreamChunk
-
-
-async def stream_chat_response(req: ChatRequest):
-    # Simulate LLM streaming response
-    for chunk in ["Hello", ", ", "world", "!"]:
-        await asyncio.sleep(0.1)
-        yield f"data: {StreamChunk(reply=chunk).model_dump_json()}\n\n"
-    yield "data: [DONE]\n\n"
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:2225be4e769553bd54732d1aa2ae079ab018611334131fa9d2f41bea366853ce
+size 2325
