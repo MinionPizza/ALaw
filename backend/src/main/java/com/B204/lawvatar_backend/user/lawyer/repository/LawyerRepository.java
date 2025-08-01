@@ -1,10 +1,3 @@
-package com.B204.lawvatar_backend.user.lawyer.repository;
-
-import com.B204.lawvatar_backend.user.lawyer.entity.Lawyer;
-import java.util.Optional;
-import org.springframework.data.jpa.repository.JpaRepository;
-
-public interface LawyerRepository extends JpaRepository<Lawyer, Long> {
-  Optional<Lawyer> findByLoginEmail(String loginEmail);
-  boolean existsByLoginEmail(String loginEmail);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1c233d304781a1a0d2155b6b489547d837e775421907577a09f170d4788e46fe
+size 1653

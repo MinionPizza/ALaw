@@ -1,14 +1,3 @@
-package com.B204.lawvatar_backend.appointment.repository;
-
-import com.B204.lawvatar_backend.appointment.entity.Appointment;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-
-import java.util.List;
-
-public interface AppointmentRepository extends JpaRepository<Appointment, Long> {
-
-    // Abstract Method
-    List<Appointment> findByLawyerId(Long lawyerId);
-    List<Appointment> findByApplicationId(Long applicationId);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:69d4432f4ba89026b457ff18fde137fe4e8e069dd25dabe781d957628b1e8474
+size 700
