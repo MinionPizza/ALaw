@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:afcc5985c4850c54663240e2b0717ceaa65d806295b408c496202737256609b4
-size 919
+package com.B204.lawvatar_backend.openvidu.room.repository;
+
+import com.B204.lawvatar_backend.openvidu.room.entity.Room;
+import jakarta.persistence.EntityManager;
+import lombok.RequiredArgsConstructor;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+public interface RoomRepository extends JpaRepository<Room, Long> {
+
+}
