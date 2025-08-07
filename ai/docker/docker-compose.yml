@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4a69d3bd690920e22115247d1d2d60c9e6b523b7d5ecee5a832adb29020145ff
-size 1510
+version: "3.8"
+
+services:
+  ai-app:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: ai-app
+    restart: always
+    ports:
+      - "8997:8000"
+    # 환경변수는 컨테이너 내부의 config/.env에서 로드됨
+    volumes:
+      - ../data:/app/data
+      - ../logs:/app/logs
+    networks:
+      - db_default
+
+networks:
+  db_default:
+    external: true
