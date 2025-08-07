@@ -1,14 +1,3 @@
-import './assets/main.css'
-
-import { createApp } from 'vue'
-import { createPinia } from 'pinia'
-
-import App from './App.vue'
-import router from './router'
-
-const app = createApp(App)
-
-app.use(createPinia())
-app.use(router)
-
-app.mount('#app')
+version https://git-lfs.github.com/spec/v1
+oid sha256:cc40cb5ca8d7d163aac1c3f9b7bcaeeea5a0f10aafa35287ba5b852dc30677b9
+size 804
