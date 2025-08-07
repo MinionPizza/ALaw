@@ -1,23 +1,3 @@
-package com.B204.lawvatar_backend.application.dto;
-
-import lombok.*;
-
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-@Getter @Setter
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
-public class AddApplicationRequest {
-
-    // Field
-    private String title;
-    private String summary;
-    private String content;
-    private String outcome;
-    private String disadvantage;
-    private Map<String, String> recommendedQuestion = new HashMap<>();
-    private List<Long> tags;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:23a65d4b0e9b382cbb6340e503dc27bed2ae2841caad27a4dbd7f417d8b387a6
+size 835
