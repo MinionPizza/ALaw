@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f17c41a0dab0c6a3910cdfdc0b4596d37913297ed28a239a4b987a5de0172604
-size 866
+package com.B204.ALaw.user.lawyer.service;
+
+import com.B204.ALaw.user.lawyer.dto.UnavailabilitySlotDto;
+import com.B204.ALaw.user.lawyer.entity.UnavailabilitySlot;
+import com.B204.ALaw.user.lawyer.repository.UnavailabilitySlotRepository;
+import java.util.List;
+import java.util.stream.Collectors;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+
+@Service
+@RequiredArgsConstructor
+public class UnavailabilityService {
+  private final UnavailabilitySlotRepository repo;
+
+  public List<UnavailabilitySlotDto> getSlotsForLawyer(Long lawyerId) {
+    List<UnavailabilitySlot> slots = repo.findByLawyerId(lawyerId);
+    return slots.stream()
+        .map(s -> new UnavailabilitySlotDto(
+            s.getLawyer().getId(),
+            s.getStartTime(),
+            s.getEndTime()
+        ))
+        .collect(Collectors.toList());
+  }
+}

@@ -1,3 +1,52 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:90c18d29dd4f6791ff0fa0c8e9e490b53b3037cbcf42ef431c23f1df18e5f58c
-size 1219
+package com.B204.ALaw.application.dto;
+
+import lombok.*;
+
+import java.time.LocalDateTime;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+@Getter @Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class GetApplicationResponse {
+
+    // Field
+    private boolean success;
+    private String message;
+    private Data data;
+
+    // Nested Class
+    @Getter @Setter
+    @NoArgsConstructor
+    @AllArgsConstructor
+    @Builder
+    public static class Data {
+
+        // Field
+        private ApplicationDto application;
+
+        // Nested Class
+        @Getter @Setter
+        @NoArgsConstructor
+        @AllArgsConstructor
+        @Builder
+        public static class ApplicationDto {
+
+            // Field
+            private Long applicationId;
+            private Long clientId;
+            private String title;
+            private String summary;
+            private String content;
+            private String outcome;
+            private String disadvantage;
+            private Map<String, String> recommendedQuestions = new HashMap<>();
+            private boolean isCompleted;
+            private LocalDateTime createdAt;
+            private List<Long> tags;
+        }
+    }
+}

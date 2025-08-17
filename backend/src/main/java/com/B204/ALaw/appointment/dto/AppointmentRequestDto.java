@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7d65cea4fef6f513e289f3c83e9caf9452f9b9664ca727708dfa74a9c2257723
-size 550
+package com.B204.ALaw.appointment.dto;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+import jakarta.validation.constraints.NotNull;
+import java.time.LocalDateTime;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+public class AppointmentRequestDto {
+
+  @NotNull
+  private Long lawyerId;
+  @NotNull private Long applicationId;
+
+  @NotNull
+  @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+  private LocalDateTime startTime;
+
+  @NotNull
+  @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+  private LocalDateTime endTime;
+}

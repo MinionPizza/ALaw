@@ -1,3 +1,33 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c067f16184404d87c166f88e5db797edc7ae2309b6984ec5cddbd8a4eef4c8a8
-size 1180
+package com.B204.ALaw.common.exception;
+
+import com.B204.ALaw.common.exception.dto.ErrorResponse;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.validation.FieldError;
+import org.springframework.web.bind.MethodArgumentNotValidException;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@RestControllerAdvice
+public class GlobalExceptionHandler {
+
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    public ResponseEntity<ErrorResponse> handleMethodArgumentNotValidException(MethodArgumentNotValidException e) {
+
+        List<String> messages = new ArrayList<>();
+
+        for(FieldError fieldError : e.getBindingResult().getFieldErrors()) {
+            messages.add(fieldError.getDefaultMessage());
+        }
+
+        ErrorResponse errorResponse = ErrorResponse.builder()
+                .success(false)
+                .messages(messages)
+                .build();
+
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorResponse);
+    }
+}

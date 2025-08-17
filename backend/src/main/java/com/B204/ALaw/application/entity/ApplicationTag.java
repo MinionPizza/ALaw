@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:27c7341022c0ba45b1c7f8a5dc6a13b59fa1da5e78ad7ec24484b0ae31f05159
-size 629
+package com.B204.ALaw.application.entity;
+
+import com.B204.ALaw.common.tag.entity.Tag;
+import jakarta.persistence.*;
+import lombok.*;
+
+@Entity
+@Getter @Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class ApplicationTag {
+
+    // Field
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(columnDefinition = "int unsigned")
+    private Long id;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "tag_id", nullable = false)
+    private Tag tag;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "application_id", nullable = false)
+    private Application application;
+}

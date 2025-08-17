@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d34d30010f29bb2facc6d5fec63d09facd7cd3c63b448c85245625fde3d5fe49
-size 567
+package com.B204.ALaw.application.repository;
+
+import com.B204.ALaw.application.entity.Application;
+import java.util.List;
+import java.util.Optional;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ApplicationRepository extends JpaRepository<Application, Long> {
+
+    // Method
+    List<Application> findByClientId(Long clientId);
+
+    List<Application> findByClientIdAndIsCompletedTrue(Long clientId);
+
+    List<Application> findByClientIdAndIsCompletedFalse(Long clientId);
+
+    Optional<Application> findById(Long applicationId);
+}

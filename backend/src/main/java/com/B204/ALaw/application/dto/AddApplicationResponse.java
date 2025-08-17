@@ -1,3 +1,33 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b4e2243e3835411bba5be2d1716133f36177ac50650822b0c6db0b73b679a2ad
-size 657
+package com.B204.ALaw.application.dto;
+
+import lombok.*;
+
+@Getter @Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class AddApplicationResponse {
+
+    // Field
+    private boolean success;
+    private String message;
+    private Data data;
+
+    // Nested Class
+    @Getter @Setter
+    @NoArgsConstructor
+    @AllArgsConstructor
+    @Builder
+    public static class Data {
+
+        // Field
+        private Long applicationId;
+    }
+
+//    클래스 선언부에 @Builder 붙이는 것으로 대체하였습니다!
+//    @Builder
+//    public AddApplicationResponse(Long applicationId) {
+//        this.applicationId = applicationId;
+//    }
+
+}

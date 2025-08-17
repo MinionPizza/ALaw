@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9b6a4510c0d2584f4d90b51176817f0b92b6d328a3cc10c19f4d2364e835741c
-size 526
+package com.B204.ALaw.common.tag.dto;
+
+import java.util.List;
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Data
+@Getter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@AllArgsConstructor
+public class RecommendLawyerResponse {
+  private Data data;
+
+  @Getter
+  @NoArgsConstructor(access = AccessLevel.PROTECTED)
+  @AllArgsConstructor
+  public static class Data {
+    private List<RecommendedLawyerDto> recommendedLawyerList;
+  }
+}

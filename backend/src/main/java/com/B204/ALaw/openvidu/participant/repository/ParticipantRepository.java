@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ce436d0e1867ba06face94f4a73805f3334112364bfea5f1851a52f4f617e428
-size 710
+package com.B204.ALaw.openvidu.participant.repository;
+
+import com.B204.ALaw.openvidu.participant.entity.Participant;
+import com.B204.ALaw.openvidu.room.entity.Room;
+import com.B204.ALaw.user.client.entity.Client;
+import com.B204.ALaw.user.lawyer.entity.Lawyer;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ParticipantRepository extends JpaRepository<Participant, Long> {
+    void deleteByClientId(Long userId);
+    void deleteByLawyerId(Long lawyerId);
+    Participant findByClient(Client client);
+    Participant findByLawyer(Lawyer lawyer);
+    Participant findByRoom(Room room);
+    Participant findByClientId(Long userId);
+    Participant findByLawyerId(Long userId);
+}

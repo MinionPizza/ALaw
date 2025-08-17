@@ -1,3 +1,28 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a9859c080be69edb4ebc469f591b4de65b659f8e8eedb977a92903142ee35f0a
-size 614
+package com.B204.ALaw.user.client.dto;
+
+import com.B204.ALaw.user.client.entity.Client;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class ClientAdminDto {
+  private Long clientId;
+  private String oauthName;
+  private String email;
+  private String oauthProvider;
+  private String oauthIdenifier;
+
+  public static ClientAdminDto from(Client c){
+    return new ClientAdminDto(
+        c.getId(),
+        c.getOauthName(),
+        c.getEmail(),
+        c.getOauthProvider(),
+        c.getOauthIdentifier()
+    );
+  }
+
+}
