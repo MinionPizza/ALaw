@@ -113,20 +113,8 @@ Jenkins 또는 로컬에서 프로젝트 빌드 시 필요한 환경 변수 목�
 <br>
 <br>
 
-### 2. 외부 서비스 정보
-
-프로젝트가 의존하는 외부 클라우드 서비스 및 API 정보입니다.
-
-| 서비스명 | 용도 | 가입/설정 URL | 계정 정보 | API Key / Secret | 주요 설정값 |
-| --- | --- | --- | --- | --- | --- |
-| **카카오 소셜 로그인** | 사용자 인증 | https://developers.kakao.com/ | rbtjd1478@naver.com | ~~**REST API 키:** `[ 발급받은 키 ]`<br>**Client Secret:** `[ 발급받은 시크릿 ]`~~ | **Redirect URI:**<br>`https://i13b204.p.ssafy.io/api/login/oauth2/code/kakao` |
-| **OpenVidu** | 화상 통화 | 자체 호스팅 (Self-hosted) | - | **OPENVIDU_SECRET:** `ssafy204openvidulawaid` | **DOMAIN_OR_PUBLIC_IP:**<br>`https://i13b204.p.ssafy.io/openvidu` |
-| **AWS EC2** | 서버 호스팅 | i13b204.p.ssafy.io | - | - | `I13B204T.pem` |
-<br>  
-<br>  
-<br>
  
-### 3. DB 덤프 파일 최신본
+### 2. DB 덤프 파일 최신본
 
 # [DB 덤프 파일](https://lab.ssafy.com/s13-webmobile1-sub1/S13P11B204/-/blob/master/lawaid%20schema.sql?ref_type=heads)
 
@@ -152,4 +140,5 @@ Jenkins 또는 로컬에서 프로젝트 빌드 시 필요한 환경 변수 목�
 
 <br>
 <br>
+
 <br>
